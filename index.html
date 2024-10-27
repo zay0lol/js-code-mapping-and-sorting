@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hey"></h1>
+    
+    <button onclick="ascending()">ascending</button>
+<button onclick="descending()">descending</button>
+<script>
+    var numbers = [10,20,30,40];
+    function noFunction(num){
+     return num * 40;   
+    }
+    var newarray = numbers.map(noFunction);
+    document.getElementById("hey").innerHTML=newarray;
+    function ascending(){
+        newarray.sort(function(a ,b){return a - b });
+        document.getElementbyId("hey").innerHTML= newarray;
+
+    }
+    function descending() {
+        newarray.sort(function(a , b){return b - a });
+        document.getElementById("hey").innerHTML= newarray;
+    }
+</script>
+</html>
